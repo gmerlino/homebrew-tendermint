@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class Tendermint < Formula
   desc "BFT replicated state machines in any programming language"
   homepage "https://tendermint.com/"
@@ -10,11 +13,11 @@ class Tendermint < Formula
 
   head do
     url "https://github.com/tendermint/tendermint.git",
-      :branch => "develop"
+        branch: "develop"
   end
 
-  depends_on "go" => :build
   depends_on "glide" => :build
+  depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
