@@ -7,10 +7,6 @@ class Tendermint < Formula
   url "https://github.com/tendermint/tendermint/archive/v0.30.0.tar.gz"
   sha256 "85d07d87b94f4c85e4d5cc015373a14a6c4411e8e20931847c137e8c27fb2e6a"
 
-  bottle do
-    cellar :any_skip_relocation
-  end
-
   head do
     url "https://github.com/tendermint/tendermint.git",
         branch: "develop"
