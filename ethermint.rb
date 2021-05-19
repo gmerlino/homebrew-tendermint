@@ -1,17 +1,17 @@
+# typed: false
+# frozen_string_literal: true
+
+# ethermint.rb
 class Ethermint < Formula
   desc "Ethereum powered by Tendermint consensus"
   homepage "https://github.com/cosmos/ethermint"
-
-  bottle do
-    cellar :any_skip_relocation
-  end
 
   head do
     url "https://github.com/cosmos/ethermint.git"
   end
 
-  depends_on "go" => :build
   depends_on "glide" => :build
+  depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
